@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+  pib-mobile:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+      args:
+        buildNum: ${BUILD_NUM:-1}
+    image: registry.kiatnakinbank.com/rib/pib-mobile:${TAG:-latest}
